@@ -1,0 +1,55 @@
+// Value datatypes (eg : int, float, etc) are passed by value by default and Reference Datatypes (eg : String, Class) are always passed by reference.
+// Objects of a class are always passed by reference
+
+using System;
+using System.Collections;
+class abc
+{
+    private int k;
+    public int K
+    {
+        get {return k;}
+        set {k=value;}
+    }
+    public void show()
+    {
+        Console.WriteLine("Hey k = "+k);
+    }
+    public abc()
+    {
+        Console.WriteLine("Default Constructor");
+    }
+}
+
+
+class Solution
+{
+    public static void fun(int x)
+    {
+        Console.WriteLine("fun x = "+x);
+        x=x*3;
+        Console.WriteLine("fun x = "+x);
+    }
+
+    public static void fun1(abc x)
+    {
+        Console.WriteLine("fun x = "+x.K);
+        x.K=x.K*3;
+        Console.WriteLine("fun x = "+x.K);
+    }
+    
+    public static void Main()
+    {
+        abc o = new abc();
+        o.K=2;
+        o.show();
+        Console.WriteLine(o.K);
+        int a=3;
+        Console.WriteLine(a);
+        fun(a);
+        Console.WriteLine(a);
+        Console.WriteLine(o.K);
+        fun1(o);
+        Console.WriteLine(o.K);
+    }
+}
