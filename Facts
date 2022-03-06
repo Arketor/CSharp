@@ -23,4 +23,4 @@ class Solution
     }
 }
 
-2. Objects of a class are always passed by reference whereas integers and floats are passed by value
+2. Objects of a class are always passed by reference whereas integers, floats, etc are passed by value
